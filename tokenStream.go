@@ -17,7 +17,7 @@ func newTokenStream(tokens []ExpressionToken) *tokenStream {
 }
 
 func (this *tokenStream) rewind() {
-	this.index -= 1
+	this.index--
 }
 
 func (this *tokenStream) next() ExpressionToken {
@@ -26,7 +26,7 @@ func (this *tokenStream) next() ExpressionToken {
 
 	token = this.tokens[this.index]
 
-	this.index += 1
+	this.index++
 	return token
 }
 
